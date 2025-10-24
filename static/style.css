@@ -1,0 +1,288 @@
+
+/* === LOGIN PAGE STYLES === */
+/* Login Styles */
+
+.login-wrapper {
+    padding: 50px 480px 0 480px;
+    background-color: color(srgb rgb(136, 11, 11) rgb(0, 165, 0) rgb(1, 1, 49));
+}
+
+.login-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2b2b2b;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.login-title .highlight {
+    /* background: linear-gradient(90deg, #6C63FF, #3B82F6); */
+    background: linear-gradient(90deg, #6C63FF, #03183a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback untuk browser modern */
+}
+
+.login-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.login-heading {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.login-desc {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #f9f9f9;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #999;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #6C63FF, #3B82F6);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.95;
+}
+
+.error-box {
+    background-color: #ffe0e0;
+    color: #d10000;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+
+
+
+/*/////////////Dasboard//////////////////*/
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a4cff3;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #629de0;
+    color: #f3eded;
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-greeting {
+    margin-right:21px;
+}
+
+.btn.logout {
+    display: flex;
+    justify-content: flex-end; /* pindah ke kanan */
+    align-items: center;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 20px;
+}
+
+/* Columns */
+.left-column, .right-column {
+    flex: 1;
+}
+
+/* Cards */
+.card {
+    /* background-color: #c8d4d3; */
+    background-color: #fafcfd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(133, 105, 105, 0.1);
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Textarea */
+textarea#reviewText {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Model Options */
+.model-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.model-option {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.model-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.model-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.model-details h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.model-details p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.model-accuracy {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+/* Buttons */
+.btn-analyze, .btn-telegram {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-analyze:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Prediction Results */
+.prediction-empty {
+    text-align: left;
+    color: #5747e7;
+    /* color: #999; */
+}
+
+.empty-state i {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    color: #9ca3af; /* opsional: menambahkan warna ikon */
+}
+
+
