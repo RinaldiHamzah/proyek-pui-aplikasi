@@ -3,31 +3,58 @@
 {% block title %}Dashboard - Smart Review Alert Sistem{% endblock %}
 
 {% block content %}
-<div class="min-h-screen">
-    <!-- Header -->
+<div class="app-shell">
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <h1 class="header-title">SMART REVIEW ALERT SISTEM</h1>
+                <div>
+                    <p class="header-kicker">Dashboard Analisis</p>
+                    <h1 class="header-title">SMART REVIEW ALERT SISTEM</h1>
+                </div>
                 <div class="header-actions">
-                    <span class="user-greeting">Hello😉 {{ username}}</span>
-                    <a href="/logout" class="btn-logout">Logout</a>
+                    <span class="user-greeting">
+                        <i class="fas fa-circle-user"></i>
+                        Halo, {{ username }}
+                    </span>
+                    <a href="/logout" class="btn-logout">
+                        <i class="fas fa-arrow-right-from-bracket"></i>
+                        Logout
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
+            <section class="hero-panel">
+                <div>
+                    <p class="hero-eyebrow">Realtime Sentiment Monitor</p>
+                    <h2>Deteksi emosi ulasan pelanggan dalam hitungan detik.</h2>
+                    <p>Masukkan teks ulasan, pilih model klasifikasi, lalu lihat hasil prediksi dan status pengiriman notifikasi Telegram.</p>
+                </div>
+                <div class="hero-stats" aria-label="Ringkasan model">
+                    <div>
+                        <strong>2</strong>
+                        <span>Model ML</span>
+                    </div>
+                    <div>
+                        <strong>2000</strong>
+                        <span>Maks. karakter</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Alert bot</span>
+                    </div>
+                </div>
+            </section>
+
             <div class="dashboard-grid">
-                <!-- Left Column -->
                 <div class="left-column">
-                    <!-- Review Input -->
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <i class="fas fa-message-square"></i>
+                                <i class="fas fa-comment-dots"></i>
                                 Input Ulasan
                             </h3>
                             <p class="card-description">Masukkan teks ulasan yang ingin dianalisis sentimennya</p>
@@ -37,6 +64,7 @@
                                 id="reviewText" 
                                 placeholder="Contoh: Hotel ini sangat bagus, saya sangat puas dengan kualitasnya..." 
                                 maxlength="2000"
+                                aria-label="Teks ulasan"
                             ></textarea>
                             <div class="char-counter">
                                 <span id="charCount">0</span>/2000 karakter
@@ -44,11 +72,10 @@
                         </div>
                     </div>
                     
-                    <!-- Model Selector -->
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <i class="fas fa-star"></i>
+                                <i class="fas fa-microchip"></i>
                                 Pilih Model Machine Learning
                             </h3>
                             <p class="card-description">Pilih algoritma yang akan digunakan untuk prediksi sentimen</p>
@@ -80,15 +107,19 @@
                         </div>
                     </div>
                     
-                    <button id="analyzeBtn" class="btn-analyze" disabled>Analisis Sentimen</button>
+                    <button id="analyzeBtn" class="btn-analyze" disabled>
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        Analisis Sentimen
+                    </button>
                 </div>
 
-                <!-- Right Column -->
                 <div class="right-column">
-                    <!-- Prediction Results -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Hasil Prediksi</h3>
+                            <h3 class="card-title">
+                                <i class="fas fa-square-poll-vertical"></i>
+                                Hasil Prediksi
+                            </h3>
                             <p class="card-description">Hasil analisis sentimen dari model Machine Learning</p>
                         </div>
                         <div class="card-content">
@@ -102,7 +133,6 @@
                         </div>
                     </div>
                     
-                    <!-- Telegram Bot -->
                     <div class="card telegram-card">
                         <div class="card-header">
                             <h3 class="card-title">
@@ -115,19 +145,20 @@
                             <div class="telegram-features">
                                 <h4>Fitur Bot:</h4>
                                 <ul>
-                                    <li>Ulasan baru </li>
+                                    <li>Ulasan baru</li>
                                     <li>Riwayat hasil prediksi</li>
                                     <li>Multi-language support</li>
-                                    <li>Notifikasi real_time</li>
+                                    <li>Notifikasi real-time</li>
                                 </ul>
                             </div>
                             
                             <button class="btn-telegram" onclick="openTelegramBot()">
+                                <i class="fab fa-telegram"></i>
                                 Buka Telegram Bot
                             </button>
                             
                             <div class="bot-info">
-                                <small>Bot Username: @Update_Ulasan_bot</small>
+                                <small>Bot Username: @monitoring_review_bot</small>
                             </div>
                         </div>
                     </div>

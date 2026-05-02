@@ -66,6 +66,8 @@ function displayPredictionResult(result) {
     if (!resultsContainer) return;
     
     const sentimentClass = getSentimentClass(result.sentiment);
+    const telegramStatusClass = result.telegram_sent ? 'status-success' : 'status-warning';
+    const telegramMessage = result.telegram_message || 'Status Telegram tidak tersedia';
     
     resultsContainer.innerHTML = `
         <div class="prediction-result">
@@ -86,7 +88,11 @@ function displayPredictionResult(result) {
                 </div>
                 <div class="info-item">
                     <span class="info-label">Status:</span>
-                    <span class="info-value" style="color: #16a34a;">Berhasil</span>
+                    <span class="info-value status-success">Berhasil</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Telegram:</span>
+                    <span class="info-value ${telegramStatusClass}">${telegramMessage}</span>
                 </div>
             </div>
         </div>
@@ -94,10 +100,10 @@ function displayPredictionResult(result) {
 }
 
 function getSentimentClass(sentiment) {
-    switch (sentiment) {
-        case 'Positif':
+    switch ((sentiment || '').toLowerCase()) {
+        case 'positif':
             return 'sentiment-positive';
-        case 'Negatif':
+        case 'negatif':
             return 'sentiment-negative';
         default:
             return 'sentiment';
